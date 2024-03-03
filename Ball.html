@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>벽돌깨기</title>
+<!-- 폰트 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Dongle:wght@300&family=Gowun+Batang&family=Hi+Melody&family=Sigmar&display=swap" rel="stylesheet">
+<!-- CSS연결 -->
+<link rel="stylesheet" href="Ball.css">
+<!-- JS, JQUERY 연결 -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="Ball.js"></script>
+<!-- JQUERY easing 효과 추가 -->
+<script type="text/javascript" src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
+<style>* { padding: 0; margin: 0; } canvas {display: block; margin: 0 0 0 0; }</style>
+</head>
+<body>
+<!-- 메인메뉴 -->
+ <div id="main-menu">
+  <img id="settingIcon" src="img/setting.png">
+    <img id="logo" src="img/시작로고.png">
+    <p id="title">Trip feat(Brick Out)</p>
+    <button id="startButton">START</button>
+
+  <div id="setting">
+       <p>환경설정</p>
+       <p>마우스 포인터 설정</p>
+       <br>
+       <img id = "previous" src="img/previous.png" width="50px">
+       <img id = "bgi" src="img/cursor1.png" width="150px" >
+       <img id = "next" src = "img/next.png" width="50px">
+       <br><br><br><br>
+       <p>BGM 설정</p>
+       <input type="radio" id="select" name="bgm" checked="check"><label for="select">BGM 켜기</label>
+       <input type="radio" id="select2" name="bgm"><label for="select2">BGM 끄기</label>
+       <button id="okButton">확인</button>
+  </div>
+ </div>
+<!-- 인트로 -->
+ <div id="intro">
+   <p>함께 여행을 떠나요!!<br>유럽여행을 떠나고 싶나요??</p>
+   <p>네 가고싶어요!!</p>
+   <img id="passfort" src="img/비행기표.jpg">
+ </div>
+ <!-- 엔딩 -->
+ <div id="ending">
+  <img id="pig" src="img/outtro.png">
+  <p id="showTotal"></p>
+</div>
+<!-- 게임메뉴 -->
+<div id="game-menu">
+
+  <div id="menu1">
+    <p>첫번째 지역</p>
+    <p>United Kingdom(영국)</p>
+    <img id="game1Menu" src="img/game1.jpg" width="100%" height="100%">
+    
+  </div>
+  <div id="menu2">
+    <p>두번째 지역</p>
+    <p>Korea(알바몬)</p>
+    <img id="game2Menu" src="img/알바몬.png" width="100%" height="100%">
+    
+ </div>
+  <div id="menu3">
+    <p>세번째 지역</p>
+    <p>France(프랑스)</p>
+    <img id="game3Menu" src="img/game3.jpg" width="100%" height="100%">
+  </div>
+ </div>
+  <!--클리어 화면-->
+  <div id="game1_clear">
+      <img id="clearImg" src="img/stageClear.png">
+  </div>
+  <!--실패 화면-->
+  <div id="fail">
+    <img id="clearImg" src="img/stageFailed.png">
+  </div>
+<!--각각메뉴 --> 
+<div id="game1">
+  <div id="game1_alam">       <!--게임시작할때 뜨는 알림창-->
+    <div id="game1_alam_title">
+      <h1>첫번째 게임 : 축구게임</h1>
+    </div>
+    <div id="game1_alam_description">
+      <h3> 
+        주어진 시간 안에 세골을 넣고 프리미어리그 우승을 차지하라!!<br>
+      </h3>
+    </div>
+    <button>확인</button>        
+  </div>
+<div id="left">
+  <canvas id="game1_canvas"></canvas>
+</div>
+
+<div id="right">
+  <div id="game1_score">득점 횟수 : 0</div>
+  <div id="game1_life">남은 기회 : 3</div>
+  <img id="soccer" src="img/SoccerBall.jpg">
+  <div id="game1_timeout">남은 시간 : 90초</div>
+  
+</div> 
+</div>
+<div id="game2">
+ <div id="game2_left"style="width:70%;height: 100%;float: left;  "><canvas id="gameCanvas"width="100%" height="100%"style="overflow: hidden;background-color: black; background-image: 머니.png;">
+ </canvas>
+ </div>
+ <div id="game2_alam">       <!--게임시작할때 뜨는 알림창-->
+    <div id="game2_alam_title">
+      <h1 style="color: gold;">두번째 게임 : 머니 게임</h1>
+    </div>
+    <div id="game2_alam_description">
+      <h3> 
+        영국에서 축구경기를 보느라 너무 많은 돈을썼다. <br>머니 게임을 통해 돈을 벌어볼까?
+      </h3>
+    </div>
+    <button>확인</button>        
+  </div>
+   <div id="game2_right" style="width: 30%;height: 100%;float: left; background-color: black;">
+    <img id="game2_imgage" src="img/머니.png" width="90%"style="background: none; padding: 30px;">
+    <p class="game2_score" style="font-size: 90px; text-align: center; color: gold;font-family: Sigmar"></p>
+</div>
+</div>
+	<div id="game3">
+		<div id="game3_alam">       <!--게임시작할때 뜨는 알림창-->
+    <div id="game3_alam_title">
+      <h1>세번째 게임 : 빙고게임</h1>
+    </div>
+    <div id="game3_alam_description">
+      <h3> 
+        <div><span id="textbackground"><span/><br>돈이 떨어지기 전에 3빙고 맞추고 탈출하라!</div>
+      </h3>
+    </div>
+    <button>확인</button>        
+  </div>
+<div class="container">
+    <div id="game3_left">
+      <canvas id="game3_canvas"></canvas>
+    </div>
+    <div id="game3_right">
+          <p class="score">프랑스에서 보물찾기</p>
+    <div id="game3_life"></div>`
+      <table>
+        <tr id="one"> <!--가로줄-->
+            <td id="1" onclick = "colorChange(this,1)"></td> <!-- colsapn="" 행을 들어간 숫자의 갯수만큼 합침(차지) -->
+            <td id="2" onclick = "colorChange(this,2)"></td>
+            <td id="3" onclick = "colorChange(this,3)"></td>
+            <td id="4" onclick = "colorChange(this,4)"></td>
+        </tr>
+
+        <tr id="two"> 
+            <td id="5" onclick = "colorChange(this,5)"></td>
+            <td id="6" onclick = "colorChange(this,6)"></td>
+            <td id="7" onclick = "colorChange(this,7)"></td>
+            <td id="8" onclick = "colorChange(this,8)"></td>
+        </tr>
+
+        <tr id="three"> 
+            <td id="9" onclick = "colorChange(this,11)"></td> <!-- colsapn="" 열을 들어간 숫자의 갯수만큼 합침(차지) -->
+            <td id="10" onclick = "colorChange(this,12)"></td>
+            <td id="11" onclick = "colorChange(this,13)"></td>
+            <td id="12" onclick = "colorChange(this,14)"></td>
+        </tr>
+
+        <tr id="four"> 
+            <td id="13" onclick = "colorChange(this,16)"></td>
+            <td id="14" onclick = "colorChange(this,17)"></td>
+            <td id="15" onclick = "colorChange(this,18)"></td>
+            <td id="16" onclick = "colorChange(this,19)"></td>
+        </tr>
+    </table>   
+    <div id="game3_timeout">남은 시간 : 150초</div>
+    </div>
+  </div>  
+ 
+
+  <div id="game3_fall">
+        <img id="fallImg" src="img/stageFailed.png">
+  </div> 
+  <div id="game3_clear">
+        <img id="clearImg" src="img/stageClear.png">
+        <video id="video" controls>
+        <source src="img/Ending.mp4" type="video/mp4">
+        </video>
+  </div>
+  <div id="game3_fall">
+        <img id="fallImg" src="img/stageFailed.png">
+  </div> 
+	</div>
+</div>
+</body>
+</html>

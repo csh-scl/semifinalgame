@@ -1,0 +1,802 @@
+* { margin: 0px; padding: 0px;}
+body { width: 100%; height: 100%; margin: 0px auto; overflow: hidden; 
+  cursor: url("img/cursor1.png"),pointer; 
+  background-color: white;
+
+}
+
+canvas{ margin: 0px 0px 0px 0px;}
+html{ width: 100%; height: 100%; }
+li { list-style: none; }
+a { text-decoration: none;}
+img { border: 0px; background-color: transparent;}
+
+@font-face {
+  font-family: 'LAB디지털';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/*=================================================== 환경설정 ==================================================*/
+/*=================================================== 환경설정 ==================================================*/
+/*=================================================== 환경설정 ==================================================*/
+/*=================================================== 환경설정 ==================================================*/
+/*=================================================== 환경설정 ==================================================*/
+
+
+#previous{
+  float: left;
+  display: block;
+  margin-top: 100px;
+  margin-left: 300px;
+}
+#menu1 img{
+width: 100%;
+height: 1000px;
+background-size: cover;
+background-repeat: no-repeat;
+}
+#menu1 img{
+width: 100%;
+height: 1000px;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+#menu3 img{
+width: 100%;
+height: 1000px;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+#bgi{
+  float: left;
+  display: block;
+}
+#next{
+  
+  display: block;
+  margin-top: 100px;
+  
+}
+#settingIcon{
+
+  width:50px;
+  height :50px;
+  float: right;
+  
+}
+#setting{
+  display: none;
+  border-radius: 10px;
+}
+#setting p{
+  background-color: transparent;
+  color: black;
+  font-family: 'Gowun Batang', serif;
+}
+
+#setting p:nth-child(1){
+  font-size: 30px;
+  text-align: center;
+}
+.popup{
+  color: black;
+  position:fixed;
+  top:0;
+  left:0;
+  background-color: white;
+  padding: 30px 20px;
+  z-index: 1;
+  width: 900px;
+  height: 600px;
+  border: 3px solid #33FFFF;
+}
+
+#okButton{
+  
+  width: 100px;
+  height: 40px;
+  color: white;
+  border-radius: 5px;
+  background-color: #33FFFF;
+  margin: 100px 200px 200px;
+  
+  border: 0px;
+}
+input[type=radio]{
+  display: none;
+}
+input[type=radio]+label{
+  margin-top: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  
+  height: 30px;
+  width: 90px;
+  border: 1px solid #33FFFF;
+  line-height: 30px;
+  text-align: center;
+  font-weight:bold;
+  font-size:13px;
+   
+}
+input[type=radio]+label{
+  background-color: #fff;
+  color: #33FFFF;
+}
+input[type=radio]:checked+label{
+  background-color: #33FFFF;
+  color: #fff;
+}
+
+
+
+/*=================================================== 메인메뉴 ==================================================*/
+/*=================================================== 메인메뉴 ==================================================*/
+/*=================================================== 메인메뉴 ==================================================*/
+/*=================================================== 메인메뉴 ==================================================*/
+/*=================================================== 메인메뉴 ==================================================*/
+
+
+
+#main-menu{
+  padding-top: 10px;
+  background-position: center;
+  background-repeat : no-repeat;
+  background-size: cover;
+  display: block;
+  height: 100%;
+  background-image: url("img/main_logo.jpg");
+}
+#logo{
+  display: block;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  background-color: transparent;
+}
+#main-menu #title {
+  text-align: center;
+  color: #fff;
+  font-size: 5em;
+  letter-spacing: 8px;
+  font-family: 'Press Start 2P';
+  font-size: 40px;
+  margin: 0;
+  line-height: 0;
+}
+#startButton{
+  margin: 100px auto auto auto;
+  display: block;
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #33FFFF;
+  border-radius: 0.6em;
+  color: #33FFFF;
+  
+  font-size: 1rem;
+ 
+  line-height: 1;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700; 
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+#startButton:hover{
+  color: #fff;
+  outline: 0;
+  box-shadow: 0 0 40px 40px #33FFFF inset;
+}
+
+
+
+/*=================================================== 인트로 ==================================================*/
+/*=================================================== 인트로 ==================================================*/
+/*=================================================== 인트로 ==================================================*/
+/*=================================================== 인트로 ==================================================*/
+/*=================================================== 인트로 ==================================================*/
+
+
+
+#intro{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: none;
+  text-align: center;
+}
+#intro p:nth-child(1){
+  padding-top: 100px;
+  font-size: 50px;
+  font-family: 'Gowun Batang', serif;
+  color: white;
+}
+#intro p:nth-child(2){
+  margin-top: 50px;
+  font-size: 40px;
+  font-family: 'Gowun Batang', serif;
+  color: white ;
+  
+  transition: color .3s;
+}
+
+#intro p:nth-child(2):hover{
+  margin-top: 50px;
+  font-size: 40px;
+  font-family: 'Gowun Batang', serif;
+  color: #33FFFF ;
+}
+
+#passfort{
+  width:30%
+}
+
+
+#ending{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: none;
+  text-align: center;
+}
+#pig{
+  width:35%
+}
+#ending p{
+  font-family: 'LAB디지털';
+  color: white;
+  font-size: 100px;
+}
+/*=================================================== 게임메뉴 ==================================================*/
+/*=================================================== 게임메뉴 ==================================================*/
+/*=================================================== 게임메뉴 ==================================================*/
+/*=================================================== 게임메뉴 ==================================================*/
+/*=================================================== 게임메뉴 ==================================================*/
+
+
+
+#game-menu{
+  width: 100%;
+  background-color: skyblue;
+  padding-top: 0px;
+  display: none;
+  text-align: center;
+  font-family: 'Gowun Batang', serif;
+
+}
+
+#menu1{
+  background-color: skyblue;
+  -webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+   filter: grayscale(100%);
+   transition: all 0.5s ease;
+  width:33%;
+  height: 100%;
+  
+  color: white;
+  float: left;
+}
+#menu1:hover{
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+#menu1 p:nth-child(1){
+  font-size: 20px;
+  color: red ;
+}
+#menu1 p:nth-child(2){
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+#menu2{
+  background-color: skyblue;
+  
+  -webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+   filter: grayscale(100%);
+   transition: all 0.5s ease;
+  color: white;
+  height: 100%;
+  width:33%;
+  float: left;
+}
+#menu2:hover{
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+#menu2 p:nth-child(1){
+  font-size: 20px;
+  color:gold;
+}
+#menu2 p:nth-child(2){
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+#menu3{
+  background-color: skyblue; 
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: all 0.5s ease;
+  color: white;
+  height: 100%;
+  width:33%;
+  float: left;
+}
+#menu3:hover{
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+#menu3 p:nth-child(1){
+  font-size: 20px;
+  color: #33FFFF ;
+}
+
+#menu3 p:nth-child(2){
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+#game1{
+  display: none;
+}
+#game2{
+  display: none;
+}
+#game3{
+  display: none;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+#game1_clear{
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-image: url('img/clear_game1.jpg');
+  background-position: center;
+  background-repeat : no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#game1_clear img{
+  width: 60%;
+  background: none;
+  position: absolute;
+  text-align: center;
+  top:10%;
+  left: 20%;
+  z-index: 1;
+  color: white;
+}
+
+video {
+   width: 100%; 
+   height: 100%;
+   background-size: cover;
+  }
+
+
+#fail{
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-image: url("img/fail.jpg");
+  background-position: center;
+  background-repeat : no-repeat;
+  background-size: cover;
+}
+#fail img{
+  width: 60%;
+  background: none;
+  position: absolute;
+  top:10%;
+  left: 20%;
+  z-index: 1;
+}
+
+/*=================================================== GAME 1 ==================================================*/
+/*=================================================== GAME 1 ==================================================*/
+/*=================================================== GAME 1 ==================================================*/
+/*=================================================== GAME 1 ==================================================*/
+/*=================================================== GAME 1 ==================================================*/
+
+#game1 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#left{
+  width: 70%;
+  height: 100%;
+  float: left;
+
+}
+#right{
+  width: 30%;
+  height: 100%;
+  float: left;
+  background-color: white;
+}
+#right h1 {
+  background-color: white;
+}
+#game1_canvas {
+  background-color: black;
+  background-image: url("img/soccer.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+#game1_timeout {
+  background-color: white;
+}
+
+#game1_alam {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  top: 30%;
+  left: 30%;
+  color: white;
+  background-color: black;
+  border: 3px solid #33FFFF;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Gowun Batang', serif;
+  
+}
+#game1_alam_title{
+  background: none;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+#game1_alam_title h1{
+  color: #33FFFF;
+  background: none;
+  margin-bottom: 10%;
+}
+#game1_alam_description{
+  background: none;
+}
+#game1_alam_description p{
+  margin-top: 30px;
+  font-size: 20px;
+  background: none;
+  
+}
+#game1_alam button {
+  width: 100px;
+  height: 40px;
+  color: white;
+  border-radius: 5px;
+  background-color: #33FFFF;
+  margin: 80px 200px 200px;
+  border: 0px;
+}
+#game1_timeout{
+  margin-top: 20px;
+  background: none;
+  font-family: 'LAB디지털';
+  text-align: center;
+  font-size: 50px;
+}
+#soccer{
+  background: none;
+  
+  width: 95%;
+}
+#game1_score{
+
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  height: 50px;
+  color: black;
+  font-size: 30px;
+  text-align: center;
+  font-family: 'LAB디지털';
+  background: none;
+}
+#game1_life {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  height: 50px;
+  color: black;
+  font-size: 30px;
+  text-align: center;
+  font-family: 'LAB디지털';
+  background: none;
+}
+
+
+/*=================================================== GAME 2 ==================================================*/
+/*=================================================== GAME 2 ==================================================*/
+/*=================================================== GAME 2 ==================================================*/
+/*=================================================== GAME 2 ==================================================*/
+/*=================================================== GAME 2 ==================================================*/
+#game2 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#game2_alam {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  top: 30%;
+  left: 30%;
+  color: white;
+  background-color: black;
+  border: 3px solid #33FFFF;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Gowun Batang', serif;
+  
+}
+#game2_alam_title{
+  background: none;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+#game2_alam_title h1{
+  color: #33FFFF;
+  background: none;
+  margin-bottom: 10%;
+}
+#game2_alam_description{
+  background: none;
+}
+#game2_alam_description p{
+  margin-top: 30px;
+  font-size: 20px;
+  background: none;
+  
+}
+#game2_alam button {
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  color: white;
+  border-radius: 5px;
+  background-color: #33FFFF;
+  margin: 80px 200px 200px;
+  border: 0px;
+}
+#gameCanvas {
+      border: 1px solid black;
+      background-color: #eee;
+      margin: 0 auto;
+    }
+
+
+/*=================================================== GAME 3 ==================================================*/
+/*=================================================== GAME 3 ==================================================*/
+/*=================================================== GAME 3 ==================================================*/
+/*=================================================== GAME 3 ==================================================*/
+/*=================================================== GAME 3 ==================================================*/
+
+
+table{
+  margin-left: 10px;
+  display: none;
+  margin-right: 10px;
+}
+
+td {
+ border: solid 5px pink;
+ width: 100px;
+ height: 100px;
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ opacity: 1;
+}
+
+
+        #textbackground{
+          background-color: black;
+        }
+        
+        #game3_left{
+          width: 50%;
+          height: 100%;
+          float: left;
+          background-color: black ;
+          background-image: url("img/maple.png");
+          background-size: 100% 100%;
+          opacity: 1;
+        }
+
+        #game3_right{
+          width: 50%;
+          height: 100%;
+          float: right;
+          background-color: black;
+          background-size: 100% 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+
+        html, body {
+          height: 100%;
+          margin: 0;
+        }
+
+        .container {
+          width: 100%;
+          height: 100%;
+        }
+
+        .score{
+          margin-top: 10px;
+          font-family: 'LAB디지털';
+          background: none;
+          color: white;
+          text-align: center;
+          font-size: 40px;
+        }
+
+#game3_timeout {
+  color: red;
+}
+
+#game3_alam {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  top: 30%;
+  left: 30%;
+  color: white;
+/*  background-color: black;*/
+  border: 3px solid #90EE90;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Gowun Batang', serif;
+  
+}
+#game3_alam_title{
+  background: none;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+#game3_alam_title h1{
+  color: #e11880;
+  background: none;
+  margin-bottom: 10%;
+}
+#game3_alam_description{
+  background: none;
+}
+#game3_alam_description p{
+  margin-top: 30px;
+  font-size: 20px;
+  background: none;
+  
+}
+#game3_alam button {
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  color: white;
+  border-radius: 5px;
+  background-color: #e11880;
+  margin: 80px 200px 200px;
+  border: 0px;
+}
+#game3_timeout{
+  margin-top: 20px;
+  background: none;
+  font-family: 'LAB디지털';
+  text-align: center;
+  font-size: 50px;
+  display: none;
+}
+
+
+h3{
+    font-family: 'LAB디지털';
+}
+
+#game3_life {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  height: 50px;
+  color: black;
+  font-size: 30px;
+  text-align: center;
+  font-family: 'LAB디지털';
+  background: none;
+}
+
+#game3_clear{
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-image: url('img/game3.jpg');
+  background-position: center;
+  background-size: auto 750px;
+  background-repeat: no-repeat;
+}
+#game3_clear img{
+  width: 60%;
+  background: none;
+  position: absolute;
+  text-align: center;
+  top:10%;
+  left: 20%;
+  z-index: 1;
+  color: white;
+  display: none;
+}
+
+#video{
+  display: none;
+}
+
+#game3_fall{
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-image: url('img/fail2.jpg');   
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+#game3_fall img{
+  width: 60%;
+  background: none;
+  position: absolute;
+  text-align: center;
+  top:10%;
+  left: 20%;
+  z-index: 1;
+  color: white;
+  display: none;
+}
+
+
+#game3_canvas{
+  width: 80%;
+  height: 80%;
+  display: block;  
+  margin:30px auto;
+}
+
+
